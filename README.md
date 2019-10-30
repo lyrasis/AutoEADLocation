@@ -18,7 +18,7 @@ UPDATE resource SET ead_location = CONCAT_WS(
   repo_id,
   'resources',
   id
-);
+), system_mtime = NOW();
 ```
 
 Where `$public_proxy_url` matches `AppConfig[:public_proxy_url]`.
